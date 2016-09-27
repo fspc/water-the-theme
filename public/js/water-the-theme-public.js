@@ -29,4 +29,33 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+	 $( window ).load(function() {
+	 
+	 	// #BED8D3' '#D8E4E6'
+		$('#Statistics tr:nth-child(6n), #Statistics tr:nth-child(6n-1), #Statistics tr:nth-child(6n-2)').css({backgroundColor:'#D8E4E6'});
+		$('#Statistics tr:nth-child(6n-3), #Statistics tr:nth-child(6n-4), #Statistics tr:nth-child(6n-5)').css({backgroundColor:'#BED8D3'});	 
+	 
+		$("td[datetime]").each(function(key,value){
+																	  var dt = $(value).attr('datetime');
+																	  var d = new Date(Number(dt));
+																	  d = d.toLocaleString();
+																	  $(this).html(d);
+																});
+																
+		/* 
+			div:nth-child(6n), div:nth-child(6n-1), div:nth-child(6n-2) {
+    			background: red;
+			}
+			div:nth-child(6n-3), div:nth-child(6n-4), div:nth-child(6n-5) {
+    			background: blue;
+			}
+		*/
+
+
+	});
+	
+	//$('#Statistics tr:nth-child(6n), #Statistics tr:nth-child(6n-1), #Statistics tr:nth-child(6n-2)').css({backgroundColor:'#d4cdcd'});
+	//$('#Statistics tr:nth-child(6n-3), #Statistics tr:nth-child(6n-4), #Statistics tr:nth-child(6n-5)').css({backgroundColor:'#bac3c5'});
+	//$('#Statistics tr:nth-child(6n-3), #Statistics tr:nth-child(6n-4), #Statistics tr:nth-child(6n-5)').css({backgroundColor:'#bac3c5'});
+
 })( jQuery );
