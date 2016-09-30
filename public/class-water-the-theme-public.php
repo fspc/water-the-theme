@@ -285,12 +285,12 @@ class Water_The_Theme_Public {
 				if($c === 0 && $date_range === 'current') {
 					$thePage .= "<tr><td>Tail Race Level (AMSL)</td><td>$tail_race_level ft</td><td datetime='$datetime'></td></tr>";
 					//$thePage .= "<tr><td>Gage Datum (AMSL)</td><td>$waterlevel ft</td><td datetime='$datetime'></td></tr>";
-					$thePage .= "<tr><td>Tail Water Flow</td><td>$waterflow</td><td datetime='$datetime'></td></tr>";
+					//$thePage .= "<tr><td>Tail Water Flow</td><td>$waterflow</td><td datetime='$datetime'></td></tr>";
 					break;			
 				} else {
 					$thePage .= "<tr><td>Tail Race Level (AMSL)</td><td>$tail_race_evel</td><td datetime='$datetime'></td></tr>";
 					//$thePage .= "<tr><td>Gage Datum (AMSL)</td><td>$waterlevel ft</td><td datetime='$datetime'></td></tr>";
-					$thePage .= "<tr><td>Tail Water Flow</td><td>$waterflow</td><td datetime='$datetime'></td></tr>";				
+					//$thePage .= "<tr><td>Tail Water Flow</td><td>$waterflow</td><td datetime='$datetime'></td></tr>";				
 				}				
 				$c++;			
 					
