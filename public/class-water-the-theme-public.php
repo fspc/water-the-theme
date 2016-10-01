@@ -112,7 +112,7 @@ class Water_The_Theme_Public {
 		
 		// front page	
 		// [usgs_custom name="Timely Information" location='03071590,03071600,03071605' parameters='00010,00065,62614'] 	
-		if ($short_code_name === 'Timely Information') {
+		if ($short_code_name === 'timely-information') {
 			foreach ($xml_tree->body->div->div as $div) {
 			
 				$value = (string)$div;
