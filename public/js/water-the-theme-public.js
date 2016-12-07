@@ -37,9 +37,14 @@
 	 
 		$("td[datetime]").each(function(key,value){
 																	  var dt = $(value).attr('datetime');
-																	  var d = new Date(Number(dt));
-																	  d = d.toLocaleString();
-																	  $(this).html(d);
+																	  if (dt != 'n/a') {
+																	  	var d = new Date(Number(dt));
+																	  	d = d.toLocaleString();
+																	  	$(this).html(d);
+																	  } else {
+																		 $(this).html(dt);				  
+																	  }
+																	  
 																});
 
 	});
