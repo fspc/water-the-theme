@@ -145,10 +145,11 @@ class Water_The_Theme_Public {
 					$sitename = 'Below Dam';				
 				}
 
+				if ( $sitename !== 'Lake') {
 				$thePage .= '<tr>';
 				$thePage .= "<td>$sitename $parameter</td><td>$value</td><td datetime='$datetime'></td>";
 				$thePage .= '</tr>';				
-				
+				}
 			}	
 			
 			//[nws_custom location='lldp1']
