@@ -32,8 +32,8 @@
 	 $( window ).load(function() {
 	 
 	 	// #BED8D3' '#D8E4E6'
-		$('#Statistics tr:nth-child(6n), #Statistics tr:nth-child(6n-1), #Statistics tr:nth-child(6n-2)').css({backgroundColor:'#D8E4E6'});
-		$('#Statistics tr:nth-child(6n-3), #Statistics tr:nth-child(6n-4), #Statistics tr:nth-child(6n-5)').css({backgroundColor:'#BED8D3'});	 
+		// $('#Statistics tr:nth-child(6n), #Statistics tr:nth-child(6n-1), #Statistics tr:nth-child(6n-2)').css({backgroundColor:'#D8E4E6'});
+		// $('#Statistics tr:nth-child(6n-3), #Statistics tr:nth-child(6n-4), #Statistics tr:nth-child(6n-5)').css({backgroundColor:'#BED8D3'});	 
 	 
 		$("td[datetime]").each(function(key,value){
 																	  var dt = $(value).attr('datetime');
