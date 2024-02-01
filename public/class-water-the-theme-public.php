@@ -226,6 +226,16 @@ class Water_The_Theme_Public
 				return $dateTimeB - $dateTimeA;
 			});
 
+			foreach ($statistics as &$row) {
+				if (preg_match('/<tr><td>Tail Race Level  \(AMSL\)<\/td><td>([\d.]+)<\/td>/', $row, $matches)) {
+					// Extract the numeric value and append " ft"
+					$value = $matches[1] . ' ft';
+			
+					// Replace the original content in the second <td>
+					$row = preg_replace('/<tr><td>Tail Race Level  \(AMSL\)<\/td><td>[\d.]+<\/td>/', "<tr><td>Tail Race Level  (AMSL)</td><td>$value</td>", $row);
+				}
+			}
+
 			// highlight_string(var_export($statistics, true));
 			list($array1, $array2, $array3) = array_chunk($statistics, ceil(count($statistics) / 1));
 			// highlight_string(var_export($array1, true));
@@ -309,7 +319,7 @@ class Water_The_Theme_Public
 						//$thePage .= "<tr><td>Tail Water Flow</td><td>$waterflow</td><td datetime='$datetime'></td></tr>";
 						break;
 					} else {
-						$thePage .= "<tr><td>Tail Race Level (AMSL)</td><td>$tail_race_evel</td><td datetime='$datetime'></td></tr>";
+						$thePage .= "<tr><td>Tail Race Level (AMSL)</td><td>$tail_race_level</td><td datetime='$datetime'></td></tr>";
 						//$thePage .= "<tr><td>Gage Datum (AMSL)</td><td>$waterlevel ft</td><td datetime='$datetime'></td></tr>";
 						//$thePage .= "<tr><td>Tail Water Flow</td><td>$waterflow</td><td datetime='$datetime'></td></tr>";				
 					}
